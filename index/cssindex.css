@@ -1,0 +1,296 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3033;
+    color: #fff;
+}
+
+.logo img {
+    width: 50px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Carousel Image Container */
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Tamaño fijo de altura */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.carousel-item {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.social-icon {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .carousel img {
+        max-width: 90%;
+    }
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    z-index: 100;
+}
+
+.nav-item {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* Icons as text content for simplicity without Font Awesome */
+
+.icon-home::before {
+    content: "⌂";
+}
+
+.icon-grid::before {
+    content: "☰";
+}
+
+.icon-user::before {
+    content: "👤";
+}
+
+@media (max-width: 640px) {
+    .product-name {
+        font-size: 12px;
+    }
+    
+    .price {
+        font-size: 16px;
+    }
+    
+    .add-button {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        gap: 10px;
+    }
+    
+    .product-card {
+        padding: 8px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .product-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .add-button:hover {
+        background: #248f3f;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #130f96;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo img {
+    width: 50px; /* Ajusta según el tamaño de tu logo */
+    height: auto;
+}
+
+.navbar-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar-welcome p {
+    font-size: 1rem;
+    margin-left: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar-title h1 {
+        font-size: 1.2rem;
+    }
+    .navbar-welcome p {
+        font-size: 0.9rem;
+    }
+}
+
+.news-container {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+.news-image {
+    flex: 1;
+    min-width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news-content {
+    flex: 2;
+    padding: 20px;
+}
+.news-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.news-date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.news-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+    .news-image {
+        width: 100%;
+        height: 200px;
+    }
+}
